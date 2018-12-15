@@ -48,6 +48,9 @@ function hideACard(idx){
 }
 
 function revealCard(Event){
+    if(cardsPicked.length >1){
+        return;
+    }
     var clickedImageId = event.target.id;
     var clickedImage = document.getElementById(clickedImageId);
     clickedImage.src = "static/images/" + arrOfImages[clickedImageId];
